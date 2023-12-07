@@ -4,7 +4,7 @@
 kaggle dataset
 - Hymenoptera Dataset (Ant-Bee classification): https://www.kaggle.com/datasets/thedatasith/Hymenoptera
 
-- Birds 535 species Dataset: https://www.kaggle.com/datasets/gpiosenka/100-bird-species
+- Birds 525 species Dataset: https://www.kaggle.com/datasets/gpiosenka/100-bird-species
 
 ## Train model with given source code
 
