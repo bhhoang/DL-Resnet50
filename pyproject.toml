@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=80", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dlresnet"
+version = "1.0.0"
+description = "ResNet-50 from scratch and via transfer learning (Keras 3 / TensorFlow) for image classification"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+    { name = "Dao Duy Manh Ha" },
+    { name = "Bui Huy Hoang" },
+    { name = "Doan Dinh Dang" },
+    { name = "Nguyen Nhat Anh" },
+    { name = "Cong Thi Hong Ha" },
+    { name = "Nguyen Le Minh Duc" },
+]
+dependencies = [
+    "tensorflow>=2.21",
+    "keras>=3.15",
+    "numpy>=2.0",
+    "pyyaml>=6.0",
+    "pillow>=11.0",
+    "matplotlib>=3.9",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=9.0", "ruff>=0.17"]
+
+[project.scripts]
+dlresnet = "dlresnet.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM"]
